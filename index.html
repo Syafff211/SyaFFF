@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyafIQ. Official Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="icon" href="ms (1).jpg" type="image/jpg">
+
+    <style>
+        .nav-link {
+            transition: color 0.3s ease-in-out;
+        }
+        .active-link {
+            color: #38BDF8 !important;
+            font-weight: bold;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #38BDF8;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 6px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: none;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0px 4px 10px rgba(56, 189, 248, 0.5);
+            z-index: 1000;
+        }
+        .back-to-top:hover {
+            background-color: #22D3EE;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-[#0A0E1A] text-white dark:bg-white dark:text-black transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center py-6 px-10 bg-[#11162A] dark:bg-gray-100 shadow-md fixed w-full top-0 z-10">
+        <div class="flex items-center space-x-4">
+            <h1 class="text-2xl font-bold text-white dark:text-black">SyafIQ</h1>
+            <button id="themeToggle" class="text-white dark:text-black bg-gray-700 dark:bg-gray-300 p-2 rounded-md transition-all">
+                🌓
+            </button>
+        </div>
+        <ul class="flex space-x-16 text-gray-300 dark:text-gray-700 font-medium">
+            <li><a href="#home" class="nav-link hover:text-cyan-400 transition duration-300">Home</a></li>
+            <li><a href="#welcome" class="nav-link hover:text-cyan-400 transition duration-300">Welcome</a></li>
+            <li><a href="#about" class="nav-link hover:text-cyan-400 transition duration-300">About</a></li>
+            <li><a href="#contact" class="nav-link hover:text-cyan-400 transition duration-300">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section flex flex-col-reverse md:flex-row items-center px-10 md:px-20 py-32">
+        <div class="md:w-1/2" data-aos="fade-right">
+            <h2 id="typing-text" class="text-4xl font-bold"></h2>
+            <h3 class="text-4xl font-bold text-cyan-400 mt-2">The Best Digital Solutions for You</h3>
+            <p class="text-gray-400 dark:text-gray-600 mt-4">
+                SyafIQ spatium digitale dispositum est ad ideas, experientias et innovationes in mundo technologiarum introducendas.
+            </p>
+            <button id="getStartedBtn" class="mt-6 px-8 py-3 bg-cyan-500 text-white font-bold rounded-lg shadow-lg active:scale-90 active:shadow-md transition transform duration-300">
+                More →
+            </button>
+        </div>
+        <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+            <img src="img-removebg-preview.png" alt="Illustration" class="w-full floating">
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="text-center py-32 bg-[#11162A] dark:bg-gray-200" data-aos="fade-up">
+        <h2 class="text-4xl font-bold">SyafIQ. Official</h2>
+        <p class="text-gray-400 dark:text-gray-600 mt-4 max-w-2xl mx-auto">
+            Programming is the act of creating a set of commands that a computer can interpret and execute to accomplish a particular task.
+        </p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="text-center py-32" data-aos="fade-up">
+        <h2 class="text-4xl font-bold">About Us</h2>
+        <p class="text-gray-400 dark:text-gray-600 mt-4 max-w-2xl mx-auto">
+            Our company is focused on providing the best digital services. We have been in the industry for over 10 years.
+        </p>
+        <div class="flex justify-center mt-10">
+            <div class="bg-white text-black p-4 rounded-lg shadow-lg max-w-sm dark:bg-gray-300">
+                <img src="profil.jpg" alt="Profile Image" class="rounded-full w-56 h-56 object-cover shadow-lg border-4 border-white border-opacity-50 mx-auto">
+                <h3 class="text-lg font-bold mt-3">Muhammad Syafiq</h3>
+                <p class="text-gray-600">Host</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="text-center py-32 bg-[#11162A] dark:bg-gray-200" data-aos="fade-up">
+        <h2 class="text-4xl font-bold">Contact Us</h2>
+        <p class="text-gray-400 dark:text-gray-600 mt-4 max-w-2xl mx-auto">
+            Hubungi Kami 
+        </p>
+        <div class="mt-10">
+            <div class="text-left inline-block">
+                <p><strong>Alamat:</strong> Walik, Kutasari, Purbalingga 53361</p>
+                <p><strong>Telepon:</strong> +62 857-887-098 (Syafiq)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-[#0A0E1A] dark:bg-gray-200">
+        <p class="text-gray-400 dark:text-gray-700">&copy; SyafIQ. Official Group. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTop" class="back-to-top">↑</button>
+
+    <!-- Scripts -->
+    <script>
+        AOS.init({ duration: 1000 });
+
+        document.getElementById("getStartedBtn").addEventListener("click", function() {
+            document.getElementById("welcome").scrollIntoView({ behavior: "smooth" });
+        });
+
+        window.onscroll = function () {
+            var button = document.getElementById("backToTop");
+            button.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Menu Active
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove("active-link");
+                        if (link.getAttribute("href").substring(1) === entry.target.id) {
+                            link.classList.add("active-link");
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.6 });
+        sections.forEach(section => observer.observe(section));
+
+        // Typing Animation
+        const text = "Welcome to Our Website";
+        let index = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById("typing-text");
+        function typeText() {
+            typingElement.innerHTML = text.substring(0, index) + '|';
+            if (!isDeleting && index < text.length) {
+                index++;
+                setTimeout(typeText, 200);
+            } else if (isDeleting && index > 0) {
+                index--;
+                setTimeout(typeText, 100);
+            } else {
+                isDeleting = !isDeleting;
+                setTimeout(typeText, 1000);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", typeText);
+
+        // Dark Mode Toggle
+        const toggleBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        if (localStorage.getItem('theme') === 'light') {
+            html.classList.add('dark');
+        }
+        toggleBtn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'light');
+            } else {
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+
+</body>
+</html>
